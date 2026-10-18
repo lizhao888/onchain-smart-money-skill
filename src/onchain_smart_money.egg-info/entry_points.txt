@@ -1,0 +1,2 @@
+[console_scripts]
+onchain-sm = onchain_sm.cli:main
