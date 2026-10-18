@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onchain-smart-money"
+version = "0.1.0"
+description = "Evidence-first on-chain research workflow: early buyers, wallet activity, risk gate (read-only)"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+onchain-sm = "onchain_sm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: 需要真实网络的测试（默认跳过）"]
+addopts = "-q"
