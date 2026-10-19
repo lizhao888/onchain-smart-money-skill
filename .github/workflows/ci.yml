@@ -23,6 +23,11 @@ jobs:
           python -m pip install -e . pytest
       - name: Tests (offline only)
         run: python -m pytest -q -m "not live"
+      - name: Coverage
+        run: |
+          python -m pip install coverage
+          python -m coverage run -m pytest -q -m "not live"
+          python -m coverage report --include="src/onchain_sm/*"
       - name: No secrets / no trading calls
         shell: bash
         run: |

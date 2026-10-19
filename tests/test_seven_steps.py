@@ -150,3 +150,30 @@ def test_portrait_filters_airdrop_and_counts_swaps():
     assert buys[0]["token"] == TOKEN
     assert buys[0]["symbol"] == "X"
     assert buys[0]["buy_count"] == 1
+
+
+# ================================================================ 补充：边界覆盖
+def test_consensus_window_exact_boundary():
+    """首买跨恰好 2 天 → concentration=0 但仍触发。"""
+    token = "0xtok"
+    portraits = [
+        survivor_portrait if False else {"wallet": "0xw1", "recent_buys": [
+            {"token": token, "first_buy_at": "2026-10-13T00:00:00+00:00", "still_holding": True}]},
+        {"wallet": "0xw2", "recent_buys": [
+            {"token": token, "first_buy_at": "2026-10-15T00:00:00+00:00", "still_holding": True}]},
+        {"wallet": "0xw3", "recent_buys": [
+            {"token": token, "first_buy_at": "2026-10-15T00:00:00+00:00", "still_holding": False}]},
+    ]
+    sigs = build_signals(portraits, k=3, window_days=7)
+    assert len(sigs) == 1 and sigs[0]["still_holding_count"] == 2
+
+
+def test_botfilter_swap30d_trigger():
+    times = [NOW - i * 3600 for i in range(10)]
+    r = classify_bot(tx_times=times, swap_30d=600)
+    assert any("30天交易" in e for e in r["evidence"])
+
+
+def test_botfilter_empty_inputs():
+    r = classify_bot(tx_times=[], tx_amounts=None, tx_blocks=None, swap_30d=None)
+    assert r["label"] == "UNKNOWN"

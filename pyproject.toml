@@ -23,3 +23,9 @@ where = ["src"]
 testpaths = ["tests"]
 markers = ["live: 需要真实网络的测试（默认跳过）"]
 addopts = "-q"
+
+[tool.coverage.run]
+source = ["src/onchain_sm"]
+
+[tool.coverage.report]
+exclude_lines = ["pragma: no cover", "if TYPE_CHECKING:"]
