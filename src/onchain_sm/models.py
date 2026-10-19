@@ -71,10 +71,14 @@ class Report:
     final_grade: str = "INCOMPLETE"
     rules_version: str = "v0"
 
+    REQUIRED_STEPS = ("token_identity", "early_buyers", "wallet_activity", "risk_gate", "report")
+
     @property
     def complete(self) -> bool:
-        # 只有「没查到 / 查失败」才叫不完整；BLOCKED 是有效结论（风险高）
-        return bool(self.steps) and not any(s.status == FAILED for s in self.steps.values())
+        # 完整 = 五个节点都跑到了，且没有「查失败」；BLOCKED 是有效结论（风险高）
+        if not all(k in self.steps for k in self.REQUIRED_STEPS):
+            return False
+        return not any(s.status == FAILED for s in self.steps.values())
 
     def as_dict(self) -> dict:
         return {
