@@ -1,0 +1,100 @@
+{
+ "version": "2026-10-19",
+ "chains": {
+  "bsc": {
+   "graduation_dex": [
+    "pancakeswap_v2",
+    "pancakeswap-v3-bsc",
+    "uniswap-v4-bsc"
+   ],
+   "launchpads": [
+    {
+     "name": "four.meme",
+     "aliases": [
+      "four-meme",
+      "four_meme"
+     ],
+     "gt_dex_tag": "four-meme",
+     "notes": "BNB官方主流; 毕业V2/V3; 4Stock变体"
+    },
+    {
+     "name": "Flap(蝴蝶)",
+     "aliases": [
+      "flap",
+      "flapdotsh",
+      "蝴蝶"
+     ],
+     "notes": "bStocks配对+100%分红税; 风险闸门税制豁免; 币配币FDV失真"
+    },
+    {
+     "name": "GraFun",
+     "aliases": [
+      "grafun",
+      "grafunlabs"
+     ],
+     "notes": "FairCurve; 毕业V3"
+    },
+    {
+     "name": "genius.fun",
+     "aliases": [
+      "genius",
+      "geniusfun"
+     ],
+     "notes": "股权叙事; 2026-09上线"
+    },
+    {
+     "name": "Brew",
+     "aliases": [
+      "brew"
+     ],
+     "notes": "无bonding curve直进V3; 流动性永久锁"
+    },
+    {
+     "name": "Sock Market",
+     "aliases": [
+      "sockmarket",
+      "sock"
+     ],
+     "notes": "bStocks变体; 2026-09上线"
+    }
+   ]
+  },
+  "solana": {
+   "graduation_dex": [
+    "pumpswap",
+    "raydium",
+    "meteora"
+   ],
+   "launchpads": [
+    {
+     "name": "pump.fun",
+     "aliases": [
+      "pumpfun",
+      "pump-fun",
+      "pump"
+     ],
+     "gt_dex_tag": "pump-fun",
+     "notes": "主力; 毕业PumpSwap"
+    },
+    {
+     "name": "Believe",
+     "aliases": [
+      "believe"
+     ],
+     "notes": "二线"
+    },
+    {
+     "name": "Raydium LaunchLab",
+     "aliases": [
+      "launchlab"
+     ],
+     "notes": "Raydium系"
+    }
+   ]
+  },
+  "ethereum": {
+   "launchpads": [],
+   "notes": "新 meme 基本不在 ETH 发"
+  }
+ }
+}

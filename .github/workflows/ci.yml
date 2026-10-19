@@ -1,0 +1,29 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: |
+          python -m pip install -U pip
+          python -m pip install -e . pytest
+      - name: Tests (offline only)
+        run: python -m pytest -q -m "not live"
+      - name: No secrets / no trading calls
+        shell: bash
+        run: |
+          ! grep -rInE "sendTransaction|signTransaction|private_key|PRIVATE_KEY" src/ tests/ skills/ || (echo "发现交易/私钥相关代码" && exit 1)

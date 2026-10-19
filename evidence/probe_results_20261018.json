@@ -1,0 +1,301 @@
+[
+ {
+  "name": "dexscreener /tokens/{ca}",
+  "url": "https://api.dexscreener.com/latest/dex/tokens/0x6982508145454ce325ddbe47a25d4ec3d2311933",
+  "status": 200,
+  "sec": 0.36,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69d8ceb71f995-HKG"
+  },
+  "snippet": "{\"schemaVersion\":\"1.0.0\",\"pairs\":[{\"chainId\":\"ethereum\",\"dexId\":\"uniswap\",\"url\":\"https://dexscreener.com/ethereum/0xa43fe16908251ee70ef74718545e4fe6c5ccec9f\",\"pairAddress\":\"0xA43fe16908251ee70EF74718545e4FE6C5cCEc9f\",\"la",
+  "note": ""
+ },
+ {
+  "name": "dexscreener /search?q=PEPE",
+  "url": "https://api.dexscreener.com/latest/dex/search?q=PEPE",
+  "status": 200,
+  "sec": 0.28,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69d8ef897e2dd-HKG"
+  },
+  "snippet": "{\"schemaVersion\":\"1.0.0\",\"pairs\":[{\"chainId\":\"robinhood\",\"dexId\":\"uniswap\",\"url\":\"https://dexscreener.com/robinhood/0x0d389c0c2e7e1bedb57fb7eb1331cd86067d85b0\",\"pairAddress\":\"0x0d389C0C2E7e1bedb57fb7eB1331CD86067d85B0\",\"",
+  "note": ""
+ },
+ {
+  "name": "dexscreener /token-pairs/v1/ethereum/{ca}",
+  "url": "https://api.dexscreener.com/token-pairs/v1/ethereum/0x6982508145454ce325ddbe47a25d4ec3d2311933",
+  "status": 200,
+  "sec": 0.31,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69d90985e1055-HKG"
+  },
+  "snippet": "[{\"chainId\":\"ethereum\",\"dexId\":\"uniswap\",\"url\":\"https://dexscreener.com/ethereum/0xa43fe16908251ee70ef74718545e4fe6c5ccec9f\",\"pairAddress\":\"0xA43fe16908251ee70EF74718545e4FE6C5cCEc9f\",\"labels\":[\"v2\"],\"baseToken\":{\"addres",
+  "note": ""
+ },
+ {
+  "name": "dexscreener /latest/dex/pairs/{chain}/{pool}",
+  "url": "https://api.dexscreener.com/latest/dex/pairs/ethereum/0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+  "status": 200,
+  "sec": 0.25,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69d929d5a7a6b-HKG"
+  },
+  "snippet": "{\"schemaVersion\":\"1.0.0\",\"pairs\":[{\"chainId\":\"ethereum\",\"dexId\":\"uniswap\",\"url\":\"https://dexscreener.com/ethereum/0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640\",\"pairAddress\":\"0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640\",\"la",
+  "note": ""
+ },
+ {
+  "name": "geckoterminal /networks",
+  "url": "https://api.geckoterminal.com/api/v2/networks",
+  "status": 200,
+  "sec": 0.58,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69d943f6d84f3-HKG"
+  },
+  "snippet": "{\"data\":[{\"id\":\"eth\",\"type\":\"network\",\"attributes\":{\"name\":\"Ethereum\",\"coingecko_asset_platform_id\":\"ethereum\"}},{\"id\":\"bsc\",\"type\":\"network\",\"attributes\":{\"name\":\"BNB Chain\",\"coingecko_asset_platform_id\":\"binance-smart-",
+  "note": ""
+ },
+ {
+  "name": "geckoterminal /networks/eth/tokens/{ca}",
+  "url": "https://api.geckoterminal.com/api/v2/networks/eth/tokens/0x6982508145454ce325ddbe47a25d4ec3d2311933",
+  "status": 200,
+  "sec": 0.52,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69d97d86f04c4-HKG"
+  },
+  "snippet": "{\"data\":{\"id\":\"eth_0x6982508145454ce325ddbe47a25d4ec3d2311933\",\"type\":\"token\",\"attributes\":{\"address\":\"0x6982508145454ce325ddbe47a25d4ec3d2311933\",\"name\":\"Pepe\",\"symbol\":\"PEPE\",\"decimals\":18,\"image_url\":\"https://coin-ima",
+  "note": ""
+ },
+ {
+  "name": "geckoterminal /networks/eth/pools/{pool}",
+  "url": "https://api.geckoterminal.com/api/v2/networks/eth/pools/0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+  "status": 200,
+  "sec": 0.53,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69d9b38b6eff5-HKG"
+  },
+  "snippet": "{\"data\":{\"id\":\"eth_0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640\",\"type\":\"pool\",\"attributes\":{\"base_token_price_usd\":\"2422.7\",\"base_token_price_native_currency\":\"1.0\",\"quote_token_price_usd\":\"1.00090767144361\",\"quote_token_",
+  "note": ""
+ },
+ {
+  "name": "geckoterminal ohlcv/hour",
+  "url": "https://api.geckoterminal.com/api/v2/networks/eth/pools/0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640/ohlcv/hour?limit=3",
+  "status": 200,
+  "sec": 0.85,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69d9e5c0586a7-HKG"
+  },
+  "snippet": "{\"data\":{\"id\":\"e44eff98-659e-4938-902e-e02bae0fe801\",\"type\":\"ohlcv_request_response\",\"attributes\":{\"ohlcv_list\":[[1792314000,2408.31,2424.99,2408.31,2422.74,1057196.9771029493],[1792310400,2407.29,2410.55,2405.25,2408.31",
+  "note": ""
+ },
+ {
+  "name": "geckoterminal /search/pools?query=PEPE",
+  "url": "https://api.geckoterminal.com/api/v2/search/pools?query=PEPE",
+  "status": 200,
+  "sec": 1.02,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69da3ac919cac-HKG"
+  },
+  "snippet": "{\"data\":[{\"id\":\"eth_0xa43fe16908251ee70ef74718545e4fe6c5ccec9f\",\"type\":\"pool\",\"attributes\":{\"base_token_price_usd\":\"0.0000039088848570017\",\"base_token_price_native_currency\":\"0.00000000160760988646703\",\"quote_token_price",
+  "note": ""
+ },
+ {
+  "name": "geckoterminal (带 Accept 头)",
+  "url": "https://api.geckoterminal.com/api/v2/networks",
+  "status": 200,
+  "sec": 0.25,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69daa0a31050b-HKG"
+  },
+  "snippet": "{\"data\":[{\"id\":\"eth\",\"type\":\"network\",\"attributes\":{\"name\":\"Ethereum\",\"coingecko_asset_platform_id\":\"ethereum\"}},{\"id\":\"bsc\",\"type\":\"network\",\"attributes\":{\"name\":\"BNB Chain\",\"coingecko_asset_platform_id\":\"binance-smart-",
+  "note": ""
+ },
+ {
+  "name": "gmgn docs",
+  "url": "https://docs.gmgn.ai/index/gmgn-agent-api",
+  "status": 200,
+  "sec": 0.54,
+  "headers": {
+   "Content-Type": "text/html; charset=utf-8",
+   "CF-Ray": "a4c69dac6ecc1f94-HKG",
+   "Server": "cloudflare"
+  },
+  "snippet": "<!DOCTYPE html><html data-dpl-id=\"p-d839d9dc5720837fe19eb45280170a\" lang=\"en\" class=\"rounded-corners theme-clean no-tint sidebar-default sidebar-list-default links-default depth-subtle font-Inter dark sheet-open:gutter-s",
+  "note": ""
+ },
+ {
+  "name": "gmgn api host 猜测 api.gmgn.ai",
+  "url": "https://api.gmgn.ai/v1/wallet/stat?chain=eth&address=0x0",
+  "status": -1,
+  "sec": 30.12,
+  "headers": {},
+  "snippet": "ERR <urlopen error _ssl.c:999: The handshake operation timed out>",
+  "note": ""
+ },
+ {
+  "name": "gmgn 网页 token 页",
+  "url": "https://gmgn.ai/eth/token/0x6982508145454ce325ddbe47a25d4ec3d2311933",
+  "status": 200,
+  "sec": 0.31,
+  "headers": {
+   "Content-Type": "text/html; charset=utf-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69e6b2bdaf51a-HKG"
+  },
+  "snippet": "<!DOCTYPE html><html class=\"dark default no-scrollbar\" data-sentry-element=\"Html\" data-sentry-component=\"MyDocument\" data-sentry-source-file=\"_document.tsx\"><head data-sentry-element=\"Head\" data-sentry-source-file=\"_docu",
+  "note": ""
+ },
+ {
+  "name": "gmgn openapi 猜测",
+  "url": "https://gmgn.ai/api/v1/token_stat/eth/0x6982508145454ce325ddbe47a25d4ec3d2311933",
+  "status": 403,
+  "sec": 0.22,
+  "headers": {
+   "Content-Type": "text/html; charset=UTF-8",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69e6d1b1502ae-HKG"
+  },
+  "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"",
+  "note": ""
+ },
+ {
+  "name": "solana getHealth",
+  "url": "https://api.mainnet-beta.solana.com",
+  "status": 200,
+  "sec": 1.67,
+  "headers": {
+   "content-type": "application/json; charset=utf-8"
+  },
+  "snippet": "{\"jsonrpc\":\"2.0\",\"result\":\"ok\",\"id\":1} ",
+  "note": ""
+ },
+ {
+  "name": "solana getSignaturesForAddress (USDC mint, 3 条)",
+  "url": "https://api.mainnet-beta.solana.com",
+  "status": 200,
+  "sec": 0.92,
+  "headers": {
+   "content-type": "application/json; charset=utf-8"
+  },
+  "snippet": "{\"jsonrpc\":\"2.0\",\"result\":[{\"blockTime\":1792316812,\"confirmationStatus\":\"finalized\",\"err\":{\"InstructionError\":[0,{\"Custom\":7}]},\"memo\":null,\"signature\":\"3qSvx2Hz81CzRemsQ5hFbQWkk9t9YpVg2Cjry8JbKdrJs5zasCRqYYwcTuP9pxESBdt",
+  "note": ""
+ },
+ {
+  "name": "helius 无 key",
+  "url": "https://mainnet.helius-rpc.com/?api-key=",
+  "status": 401,
+  "sec": 0.4,
+  "headers": {
+   "CF-Ray": "a4c69e7f5f50105b-HKG",
+   "Server": "cloudflare"
+  },
+  "snippet": "Unauthorized",
+  "note": ""
+ },
+ {
+  "name": "etherscan v2 无 key",
+  "url": "https://api.etherscan.io/v2/api?chainid=1&module=account&action=tokentx&contractaddress=0x6982508145454ce325ddbe47a25d4e",
+  "status": 200,
+  "sec": 1.02,
+  "headers": {
+   "Server": "nginx",
+   "Content-Type": "application/json; charset=utf-8"
+  },
+  "snippet": "{\"status\":\"0\",\"message\":\"NOTOK\",\"result\":\"Missing/Invalid API Key\"}",
+  "note": ""
+ },
+ {
+  "name": "blockscout v2 token",
+  "url": "https://eth.blockscout.com/api/v2/tokens/0x6982508145454ce325ddbe47a25d4ec3d2311933",
+  "status": 200,
+  "sec": 0.55,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "x-ratelimit-limit": "180",
+   "x-ratelimit-remaining": "179",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69e880b34e2dd-HKG"
+  },
+  "snippet": "{\"address_hash\":\"0x6982508145454Ce325dDbE47a25d4ec3d2311933\",\"circulating_market_cap\":\"1628182668.6083605\",\"circulating_supply\":null,\"decimals\":\"18\",\"exchange_rate\":\"0.00000386\",\"holders_count\":\"595626\",\"icon_url\":\"https",
+  "note": ""
+ },
+ {
+  "name": "blockscout v2 token transfers",
+  "url": "https://eth.blockscout.com/api/v2/tokens/0x6982508145454ce325ddbe47a25d4ec3d2311933/transfers",
+  "status": 200,
+  "sec": 0.8,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "x-ratelimit-limit": "180",
+   "x-ratelimit-remaining": "178",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69e8b1c357a6b-HKG"
+  },
+  "snippet": "{\"items\":[{\"block_hash\":\"0x37aeef8a058f7f5053579e09383845141aa0902df569eee9047cb620bbbf85ae\",\"block_number\":26218639,\"from\":{\"ens_domain_name\":null,\"hash\":\"0xEFEF30bD1ccA520619306C95091aB18473fEBC5c\",\"implementations\":[]",
+  "note": ""
+ },
+ {
+  "name": "blockscout v2 address token-transfers",
+  "url": "https://eth.blockscout.com/api/v2/addresses/0x6982508145454ce325ddbe47a25d4ec3d2311933/token-transfers",
+  "status": 200,
+  "sec": 1.17,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "x-ratelimit-limit": "180",
+   "x-ratelimit-remaining": "177",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69e902c8bcb25-HKG"
+  },
+  "snippet": "{\"items\":[{\"block_hash\":\"0x8e855878c5e0a99cdd20dd3f7302bb60f3c65b406e4fcc28001fee027d172c1a\",\"block_number\":26218393,\"from\":{\"ens_domain_name\":null,\"hash\":\"0xF257D38dCa1cD753C3080b62390f8B2CCB7642DC\",\"implementations\":[]",
+  "note": ""
+ },
+ {
+  "name": "blockscout v2 holders",
+  "url": "https://eth.blockscout.com/api/v2/tokens/0x6982508145454ce325ddbe47a25d4ec3d2311933/holders",
+  "status": 200,
+  "sec": 0.86,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "x-ratelimit-limit": "180",
+   "x-ratelimit-remaining": "176",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69e978be8aec4-HKG"
+  },
+  "snippet": "{\"items\":[{\"address\":{\"ens_domain_name\":null,\"hash\":\"0xF977814e90dA44bFA03b6295A0616a897441aceC\",\"implementations\":[],\"is_contract\":false,\"is_scam\":false,\"is_verified\":false,\"metadata\":{\"tags\":[{\"meta\":{\"main_entity\":\"Bi",
+  "note": ""
+ },
+ {
+  "name": "blockscout logs api",
+  "url": "https://eth.blockscout.com/api?module=logs&action=getLogs&fromBlock=17046105&toBlock=17047105&address=0x6982508145454ce3",
+  "status": 200,
+  "sec": 0.5,
+  "headers": {
+   "Content-Type": "application/json; charset=utf-8",
+   "x-ratelimit-limit": "10",
+   "x-ratelimit-remaining": "9",
+   "Server": "cloudflare",
+   "CF-RAY": "a4c69e9d0cd40506-HKG"
+  },
+  "snippet": "{\"message\":\"OK\",\"result\":[{\"address\":\"0x6982508145454ce325ddbe47a25d4ec3d2311933\",\"blockNumber\":\"0x1041a59\",\"data\":\"0x00000000000000000000000000000000000014bddab3e51a57cff87a50000000\",\"gasPrice\":\"0x757c2bdcb\",\"gasUsed\":\"",
+  "note": ""
+ }
+]
