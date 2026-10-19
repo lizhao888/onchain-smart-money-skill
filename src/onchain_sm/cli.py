@@ -76,6 +76,8 @@ def cmd_watch(args) -> int:
     portraits, unknowns, failed = [], [], []
     if args.chain == "solana":
         from .pipeline import survivor_portrait_sol
+        # SOL 的 activity 桩全是 UNKNOWN → 画像候选直接用 buyers（对账法已含 DEX 触达过滤）
+        human_wallets = [b["address"] for b in rep.buyers]
         sol_portraits, sol_unknowns, sol_failed = [], [], []
         for w in human_wallets[:3]:                    # R10：单轮限 3 钱包（RPC 成本）
             buys, err = survivor_portrait_sol.wallet_recent_buys_sol(http, w, days=args.survivor_window)
