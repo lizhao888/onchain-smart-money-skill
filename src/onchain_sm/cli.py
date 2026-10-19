@@ -75,7 +75,21 @@ def cmd_watch(args) -> int:
     # --- P2-5：幸存者画像（仅 HUMAN；SOL 暂不支持画像，显式标注） ---
     portraits, unknowns, failed = [], [], []
     if args.chain == "solana":
-        unknowns.append("Solana 幸存者画像需逐钱包多次 RPC，Phase 2b 接入（本轮跳过）")
+        from .pipeline import survivor_portrait_sol
+        sol_portraits, sol_unknowns, sol_failed = [], [], []
+        for w in human_wallets[:3]:                    # R10：单轮限 3 钱包（RPC 成本）
+            buys, err = survivor_portrait_sol.wallet_recent_buys_sol(http, w, days=args.survivor_window)
+            if err:
+                sol_failed.append({"wallet": w, "error": err})
+                continue
+            buys.sort(key=lambda x: x.get("first_buy_at") or "", reverse=True)
+            sol_portraits.append({"wallet": w, "recent_buys": buys,
+                                  "buy_token_count": len(buys)})
+        portraits = sol_portraits
+        unknowns.extend(sol_unknowns)
+        failed.extend(sol_failed)
+        if not human_wallets:
+            unknowns.append("无 HUMAN 幸存者，SOL 画像跳过")
     elif not human_wallets:
         unknowns.append("无 HUMAN 幸存者（全部被机器人筛剔除或 UNKNOWN），画像跳过")
     else:

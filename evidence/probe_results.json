@@ -1,0 +1,46 @@
+{
+ "probed_at": "2026-10-19T22:07:54+0800",
+ "results": [
+  {
+   "name": "blockscout-token",
+   "status": 200,
+   "ms": 542
+  },
+  {
+   "name": "blockscout-addr",
+   "status": 200,
+   "ms": 749
+  },
+  {
+   "name": "dexscreener",
+   "status": 200,
+   "ms": 1863
+  },
+  {
+   "name": "goplus-eth",
+   "status": 200,
+   "ms": 312
+  },
+  {
+   "name": "goplus-bsc",
+   "status": 200,
+   "ms": 405
+  },
+  {
+   "name": "geckoterminal",
+   "status": 200,
+   "ms": 259
+  },
+  {
+   "name": "bsc-rpc-blocknumber",
+   "status": 403,
+   "ms": 243,
+   "error": "http"
+  },
+  {
+   "name": "sol-rpc-gethealth",
+   "status": 200,
+   "ms": 1609
+  }
+ ]
+}

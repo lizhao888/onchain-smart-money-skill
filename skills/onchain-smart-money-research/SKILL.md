@@ -54,7 +54,7 @@ python -m onchain_sm.cli watch --token <样本币CA> --chain ethereum --out out
 
 **watch 限制（诚实声明）**：
 - BSC：无 Blockscout → 30 天活跃度与画像免 key 不可得，显式 UNKNOWN（`ACTIVITY_UNKNOWN_ON_BSC`），不冒充
-- Solana：画像 Phase 2b 接入（当前 watch 会跳过并标注）
+- Solana：画像已接入（每钱包 ~20 次 RPC，单轮限 3 钱包，约 2-4 分钟）
 - 幸存者画像只统计「DEX 触达的真买入」，卖出结算币（USDT/WETH 等）与空投不算买入
 - 共买信号在回测验证（Phase 2c）之前只是研究排序，不是买入建议
 
