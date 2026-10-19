@@ -18,11 +18,16 @@ description: Use when 从链上代币反查早期买家、验证钱包与风险�
 
 **不适合**：查价格走势（用行情工具）、下单交易、多链跨链研究（当前只支持 Ethereum）。
 
-## 快速开始
+## 代码在哪 / 怎么跑
+
+- **仓库（源码 + 说明文档）**：`D:\hermes媒体运营\github\onchain-smart-money-skill`
+- **本机解释器**：`D:\hermes媒体运营\github\onchain-smart-money-skill\.venv\Scripts\python.exe`
+- 先在该目录执行一次 `pip install -e .`，之后任意目录都能用 `python -m onchain_sm.cli`
 
 ```bash
+cd D:\hermes媒体运营\github\onchain-smart-money-skill
 # 1. 体检数据源（三行，全 OK 才继续）
-python -m onchain_sm.cli doctor
+.venv/Scripts/python.exe -m onchain_sm.cli doctor
 
 # 2. 跑一个代币
 python -m onchain_sm.cli run --token 0x6982508145454ce325ddbe47a25d4ec3d2311933 --out out
