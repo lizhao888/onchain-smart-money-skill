@@ -51,6 +51,11 @@ def _identity(rep: Report, http: Http, token: str, chain: str) -> bool:
     if pool is None:
         n.warnings.append(f"dexscreener:{rp.error or rp.status}")
         n.status = FAILED if n.status != FAILED else n.status
+    elif pool.get("pool_kind") != "address":
+        # V4 poolId / 未知格式：当前不支持，不能拿它去过滤日志（会误把所有转账当买入）
+        n.warnings.append(f"POOL_FORMAT_UNSUPPORTED:{pool.get('pool_kind')}")
+        n.metrics["pool_kind"] = pool.get("pool_kind")
+        n.status = WARNING
     else:
         rep.pool = pool["pool"]
         n.metrics.update({"pool": pool["pool"], "dex": pool["dex"],
@@ -59,6 +64,9 @@ def _identity(rep: Report, http: Http, token: str, chain: str) -> bool:
         n.add_ev("pool", pool["pool"], "dexscreener")
 
     rep.steps["token_identity"] = n
+    if n.status == WARNING and not rep.pool:
+        rep.final_grade = "INCOMPLETE"
+        return False
     if n.status == FAILED:
         rep.final_grade = BLOCKED
         return False
@@ -186,6 +194,7 @@ def _finalize(rep: Report) -> None:
                       "liquidity_usd": liq, "risk_blockers": rep.risk.get("blockers", [])})
     n.unknowns.append("历史盈亏：免费源无法计算成本基础")
 
+    rep.steps["report"] = n          # 先登记，再判 complete（否则会把自己算成"缺步骤"）
     if rep.risk.get("blockers"):
         rep.final_grade = BLOCKED
     elif not rep.complete:
@@ -194,7 +203,7 @@ def _finalize(rep: Report) -> None:
         rep.final_grade = "RESEARCH"
     else:
         rep.final_grade = "WATCH"
-    rep.steps["report"] = n
+    n.metrics["complete"] = rep.complete
 
 
 def _days_since(ts: Optional[str]) -> Optional[int]:
