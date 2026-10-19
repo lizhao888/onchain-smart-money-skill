@@ -5,3 +5,5 @@ out/
 .env
 *.db
 .pytest_cache/
+.coverage
+src/onchain_smart_money.egg-info/
