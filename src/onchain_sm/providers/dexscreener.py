@@ -6,6 +6,7 @@
 """
 from __future__ import annotations
 
+import re
 from typing import Optional, Tuple
 
 from ..http import Http, Response
@@ -25,8 +26,13 @@ def best_pool(http: Http, token: str, chain_id: str = "ethereum") -> Tuple[Optio
         return None, Response("EMPTY_CONFIRMED", None, r.http_status, None, r.url, r.attempts)
     pairs.sort(key=lambda p: _f((p.get("liquidity") or {}).get("usd")), reverse=True)
     p = pairs[0]
+    addr = p.get("pairAddress") or ""
+    # Uniswap V4 的 "pool" 是 64 位 poolId，不是地址 —— 不能当 topic1 用
+    kind = "address" if re.fullmatch(r"0x[0-9a-fA-F]{40}", addr) else (
+        "v4_pool_id" if re.fullmatch(r"0x[0-9a-fA-F]{64}", addr) else "unknown")
     return {
-        "pool": p.get("pairAddress"),
+        "pool": addr,
+        "pool_kind": kind,
         "dex": p.get("dexId"),
         "liquidity_usd": _f((p.get("liquidity") or {}).get("usd")),
         "volume_24h": _f((p.get("volume") or {}).get("h24")),
